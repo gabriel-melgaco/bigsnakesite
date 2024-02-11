@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+
+<head>
+  <title>Big Snake - Painel</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" title="style2" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <img src="{% static 'icons/logo.png' %}" height="42" width="42">
+          <img src="{% static 'icons/f1.png' %}" height="42" width="42">
+          <h1><a href="index.html">BIG<span class="logo_colour">_SNAKE</span><span class="logo_colour2">_CHAMPION</span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="{% url 'painel' %}">Home <img src="{% static 'icons/home.png' %}" height="20" width="20"></a></li>
+          <li><a href="examples.html">Examples</a></li>
+          <li><a href="page.html">A Page</a></li>
+          <li><a href="{% url 'contato' %}">Contato</a></li>
+          <li><img src="{% static 'icons/user.png' %}" height="52" width="52"><a href="usuario.html">Piloto, % Logado</a></li>
+          <li><a href="{% url 'login' %}">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Últimas Notícias</h3>
+        <h4>New Website Launched</h4>
+        <h5>August 1st, 2014</h5>
+        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <p></p>
+        <h4>New Website Launched</h4>
+        <h5>August 1st, 2014</h5>
+        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+    {% block container %} {% endblock %}
+
+
+    <div id="footer">
+      <li class="pull-right"><a href="#top">Voltar ao Topo</a></li>
+      <p1>Todos direitos reservados Big Snake F1 Racing</p1>
+            <a href="//www.instagram.com" target="_blank"><img src="{% static 'icons/insta.png' %}" height="22" width="22" class="media-object  img-responsive img-thumbnail"></a>
+              <a href="//www.youtube.com/@alefbarbosa5339" target="_blank"><img src="{% static 'icons/youtube.png' %}" height="22" width="22" class="media-object  img-responsive img-thumbnail"></a>
+              <a href="//www.google.com" target="_blank"><img src="{% static 'icons/facebook.png' %}" height="22" width="22" class="media-object  img-responsive img-thumbnail"></a>
+          </div>
+    </div>
+  </div>
+</body>
+</html>
