@@ -9,8 +9,7 @@ Este repositório contém um projeto web desenvolvido com **Python** utilizando 
 2. Navegue até o diretório do projeto:
    cd nome-do-repositorio
 
-3. Instale as dependências:
-   pip install -r requirements.txt
+3. Instale as dependências;
 
 4. Inicie o servidor de desenvolvimento:
    python manage.py runserver
